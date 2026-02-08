@@ -1,20 +1,20 @@
 import React from "react"
 import type { Metadata, Viewport } from 'next'
-import { DM_Sans, Space_Mono } from 'next/font/google'
+import { Inter, JetBrains_Mono } from 'next/font/google'
 
 import './globals.css'
 
-const dmSans = DM_Sans({ subsets: ['latin'], variable: '--font-dm-sans' })
-const spaceMono = Space_Mono({ subsets: ['latin'], weight: ['400', '700'], variable: '--font-space-mono' })
+const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
+const jetbrainsMono = JetBrains_Mono({ subsets: ['latin'], variable: '--font-jetbrains-mono' })
 
 export const metadata: Metadata = {
-  title: 'GlowAI - AI Skin Analysis',
-  description: 'Get personalized skin analysis, food recommendations, skincare routines, and care suggestions powered by AI. Just take a selfie.',
+  title: 'SafeSite - Construction Safety Reporting',
+  description: 'Report unsafe conditions on construction sites instantly. Photo evidence, location tagging, and real-time notifications to management.',
   generator: 'v0.app',
 }
 
 export const viewport: Viewport = {
-  themeColor: '#4a9e82',
+  themeColor: '#f97316',
   width: 'device-width',
   initialScale: 1,
   maximumScale: 1,
@@ -28,7 +28,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${dmSans.variable} ${spaceMono.variable} font-sans antialiased min-h-screen bg-background text-foreground`}>{children}</body>
+      <body className={`${inter.variable} ${jetbrainsMono.variable} font-sans antialiased min-h-screen bg-background text-foreground`}>{children}</body>
     </html>
   )
 }
