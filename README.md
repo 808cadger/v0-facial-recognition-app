@@ -114,4 +114,4 @@ GlowAI provides general skincare guidance only. It is not a substitute for profe
 
 ## License
 
-MIT
+MIT License - see [LICENSE](LICENSE) for details.
