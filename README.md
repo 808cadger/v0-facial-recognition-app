@@ -1,3 +1,5 @@
+# 👋 Christopher Cadger | Aspiring AGI/ML Engineer, Honolulu HI
+*IBM AI Engineering Cert | Robotics + Computer Vision | Open to junior roles*
 # GlowAI - AI Skin Analysis
 
 GlowAI is an AI-powered skin analysis web app. Take a selfie or upload a photo and receive a full personalized report including detected skin issues, food recommendations, a daily skincare routine, product suggestions, lifestyle tips, and doctor visit guidance.
