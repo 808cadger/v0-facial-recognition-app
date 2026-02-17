@@ -4,6 +4,8 @@
 
 GlowAI is an AI-powered skin analysis web app. Take a selfie or upload a photo and receive a full personalized report including detected skin issues, food recommendations, a daily skincare routine, product suggestions, lifestyle tips, and doctor visit guidance.
 
+Demo:https://youtu.be/AtEAIHyb-sg
+
 ## Features
 
 - **Camera Capture & Upload** - Use your device camera to take a selfie or upload an existing photo. Works on desktop and mobile.
