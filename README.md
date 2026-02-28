@@ -1,16 +1,13 @@
 # GlowAI
 
-[![Live Demo](https://img.shields.io/badge/Live-Vercel-black?logo=vercel&logoColor=white)](https://quickapp-three.vercel.app)
 [![GitHub last commit](https://img.shields.io/github/last-commit/808cadger/GlowAI)](https://github.com/808cadger/GlowAI/commits/main)
 [![GitHub repo size](https://img.shields.io/github/repo-size/808cadger/GlowAI)](https://github.com/808cadger/GlowAI)
 [![Capacitor](https://img.shields.io/badge/Capacitor-119EFF?logo=capacitor&logoColor=white)](https://capacitorjs.com/)
 [![Claude AI](https://img.shields.io/badge/Claude_AI-Anthropic-D97706?logo=anthropic&logoColor=white)](https://anthropic.com/)
 [![GitHub stars](https://img.shields.io/github/stars/808cadger/GlowAI?style=social)](https://github.com/808cadger/GlowAI/stargazers)
-[![YouTube](https://img.shields.io/badge/Demo-YouTube-FF0000?logo=youtube&logoColor=white)](https://youtube.com/shorts/HJhoHTewcf8?feature=share)
+[![YouTube](https://img.shields.io/badge/Demo-YouTube-FF0000?logo=youtube&logoColor=white)](https://youtube.com/shorts/HjhoHTewcf8)
 
-**Live App:** [quickapp-three.vercel.app](https://quickapp-three.vercel.app)
-
-**Demo Video:** [Watch on YouTube](https://youtube.com/shorts/HJhoHTewcf8?feature=share)
+**Demo Video:** [Watch on YouTube](https://youtube.com/shorts/HjhoHTewcf8)
 
 An AI-powered skincare mobile app built with Capacitor and Claude AI (Anthropic). Features a full multi-screen SPA with an agentic AI assistant that analyzes your skin, builds personalized routines, and tracks your progress.
 
