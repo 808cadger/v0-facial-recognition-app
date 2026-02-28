@@ -1,0 +1,7 @@
+node_modules/
+.claude/
+android/.gradle/
+android/app/build/
+android/build/
+*.keystore
+.env
