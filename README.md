@@ -1,5 +1,12 @@
 # GlowAI
 
+[![Live Demo](https://img.shields.io/badge/Live-Vercel-black?logo=vercel&logoColor=white)](https://quickapp-three.vercel.app)
+[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)
+[![GitHub last commit](https://img.shields.io/github/last-commit/808cadger/GlowAI)](https://github.com/808cadger/GlowAI/commits/main)
+[![GitHub repo size](https://img.shields.io/github/repo-size/808cadger/GlowAI)](https://github.com/808cadger/GlowAI)
+[![Capacitor](https://img.shields.io/badge/Capacitor-119EFF?logo=capacitor&logoColor=white)](https://capacitorjs.com/)
+[![Claude AI](https://img.shields.io/badge/Claude_AI-Anthropic-D97706?logo=anthropic&logoColor=white)](https://anthropic.com/)
+
 **Live App:** [quickapp-three.vercel.app](https://quickapp-three.vercel.app)
 
 An AI-powered skincare mobile app built with Capacitor and Claude AI (Anthropic). Features a full multi-screen SPA with an agentic AI assistant that analyzes your skin, builds personalized routines, and tracks your progress.
