@@ -1,4 +1,4 @@
-package com.glowai.app;
+package com.archertravel.app;
 
 import com.getcapacitor.BridgeActivity;
 

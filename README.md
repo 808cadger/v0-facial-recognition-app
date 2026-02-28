@@ -1,6 +1,6 @@
-# GlowAI
+# Archer Travel
 
-A mobile app built with [Capacitor](https://capacitorjs.com/) that wraps the GlowAI web application. The web frontend is hosted on Vercel and served inside a native Android shell.
+A mobile app built with [Capacitor](https://capacitorjs.com/) that wraps the Archer Travel web application. The web frontend is hosted on Vercel and served inside a native Android shell.
 
 ---
 
@@ -66,7 +66,7 @@ android/app/build/outputs/apk/debug/app-debug.apk
 
 ## Building a Release APK
 
-The release signing config uses the keystore at the project root (`glowai-release.keystore`).
+The release signing config uses the keystore at the project root (`archer-release.keystore`).
 
 ```bash
 cd android
@@ -94,7 +94,7 @@ quickapp/
 │   └── index.html
 ├── capacitor.config.json     # Capacitor configuration
 ├── package.json
-└── glowai-release.keystore   # Release signing keystore
+└── archer-release.keystore   # Release signing keystore
 ```
 
 ---
@@ -105,8 +105,8 @@ The app is configured to load the web app from Vercel via `capacitor.config.json
 
 ```json
 {
-  "appId": "com.glowai.app",
-  "appName": "GlowAI",
+  "appId": "com.archertravel.app",
+  "appName": "Archer Travel",
   "webDir": "www",
   "server": {
     "androidScheme": "https",
@@ -127,4 +127,4 @@ npx cap sync android
 
 - **Gradle build fails:** Make sure your Android SDK path is set correctly in `android/local.properties`.
 - **App shows blank screen:** Check that the `server.url` in `capacitor.config.json` is reachable from the device.
-- **Keystore not found:** Ensure `glowai-release.keystore` exists at the project root before running a release build.
+- **Keystore not found:** Ensure `archer-release.keystore` exists at the project root before running a release build.
