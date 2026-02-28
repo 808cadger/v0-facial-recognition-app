@@ -1,7 +1,6 @@
 # GlowAI
 
 [![Live Demo](https://img.shields.io/badge/Live-Vercel-black?logo=vercel&logoColor=white)](https://quickapp-three.vercel.app)
-[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)
 [![GitHub last commit](https://img.shields.io/github/last-commit/808cadger/GlowAI)](https://github.com/808cadger/GlowAI/commits/main)
 [![GitHub repo size](https://img.shields.io/github/repo-size/808cadger/GlowAI)](https://github.com/808cadger/GlowAI)
 [![Capacitor](https://img.shields.io/badge/Capacitor-119EFF?logo=capacitor&logoColor=white)](https://capacitorjs.com/)

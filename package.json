@@ -8,7 +8,7 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "UNLICENSED",
   "dependencies": {
     "@capacitor/android": "^5.7.8",
     "@capacitor/cli": "^5.7.8",
