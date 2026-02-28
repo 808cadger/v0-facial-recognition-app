@@ -9,6 +9,8 @@
 
 **Live App:** [quickapp-three.vercel.app](https://quickapp-three.vercel.app)
 
+**Demo Video:** [Watch on YouTube](https://youtube.com/shorts/HJhoHTewcf8?feature=share)
+
 An AI-powered skincare mobile app built with Capacitor and Claude AI (Anthropic). Features a full multi-screen SPA with an agentic AI assistant that analyzes your skin, builds personalized routines, and tracks your progress.
 
 ---
