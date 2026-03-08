@@ -106,6 +106,13 @@
       border-radius: 1px; animation: beamScan 2.2s ease-in-out infinite;
     }
     .scan-beam.hidden-beam { opacity: 0; }
+    #cam-feed {
+      position: absolute; inset: 0; width: 100%; height: 100%;
+      object-fit: cover; border-radius: 50%;
+      opacity: 0; transition: opacity 0.6s; transform: scaleX(-1);
+    }
+    #cam-feed.active { opacity: 1; }
+    .face-inner svg { transition: opacity 0.4s; }
     @keyframes beamScan { 0%{top:15%;opacity:0} 10%{opacity:0.9} 50%{top:78%} 90%{opacity:0.9} 100%{top:15%;opacity:0} }
     @keyframes spin { to{transform:rotate(360deg)} }
     @keyframes spinReverse { to{transform:rotate(-360deg)} }
@@ -549,7 +556,8 @@
     <div class="face-spin-ring" id="face-spin-1"></div>
     <div class="face-spin-ring2" id="face-spin-2"></div>
     <div class="face-inner">
-      <svg viewBox="0 0 76 76" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <video id="cam-feed" autoplay muted playsinline></video>
+      <svg id="face-svg" viewBox="0 0 76 76" fill="none" xmlns="http://www.w3.org/2000/svg">
         <!-- Face outline -->
         <ellipse cx="38" cy="36" rx="22" ry="26" fill="none" stroke="rgba(147,184,220,0.5)" stroke-width="1.5"/>
         <!-- Eyes -->
@@ -921,6 +929,32 @@ function boot() {
   }, 2400);
 }
 
+let camStream = null;
+
+async function startCamera() {
+  if (!navigator.mediaDevices?.getUserMedia) return;
+  try {
+    camStream = await navigator.mediaDevices.getUserMedia({ video: { facingMode: 'user' }, audio: false });
+    const vid = document.getElementById('cam-feed');
+    vid.srcObject = camStream;
+    vid.classList.add('active');
+    document.getElementById('face-svg').style.opacity = '0';
+  } catch (e) {
+    // Camera denied or unavailable — SVG fallback stays visible
+  }
+}
+
+function stopCamera() {
+  if (camStream) {
+    camStream.getTracks().forEach(t => t.stop());
+    camStream = null;
+  }
+  const vid = document.getElementById('cam-feed');
+  if (vid) { vid.srcObject = null; vid.classList.remove('active'); }
+  const svg = document.getElementById('face-svg');
+  if (svg) svg.style.opacity = '1';
+}
+
 function showAuthReturn() {
   // Return user: show auto-scanning auth
   document.getElementById('auth-title').textContent = 'Welcome back, ' + (state.profile?.name?.split(' ')[0] || 'Counselor');
@@ -930,16 +964,18 @@ function showAuthReturn() {
   document.getElementById('auth-btn').style.opacity = '0.5';
   document.getElementById('scan-beam').classList.remove('hidden-beam');
   showScreen('auth');
+  startCamera();
 
-  // Auto-authenticate after 1.5s
+  // Auto-authenticate after 2s (gives camera time to appear)
   setTimeout(() => {
     document.getElementById('auth-status').textContent = '✓ Identity verified';
     document.getElementById('auth-status').style.color = '#6EE7B7';
     setTimeout(() => {
       state.authenticated = true;
+      stopCamera();
       enterApp();
     }, 600);
-  }, 1500);
+  }, 2000);
 }
 
 function showAuthSetup() {
@@ -951,6 +987,7 @@ function showAuthSetup() {
   document.getElementById('auth-btn').style.opacity = '1';
   document.getElementById('scan-beam').classList.add('hidden-beam');
   showScreen('auth');
+  startCamera();
 }
 
 function handleAuthBtn() {
@@ -967,6 +1004,7 @@ function handleAuthBtn() {
   document.getElementById('scan-beam').classList.remove('hidden-beam');
   setTimeout(() => {
     state.authenticated = true;
+    stopCamera();
     enterApp();
   }, 1000);
 }
